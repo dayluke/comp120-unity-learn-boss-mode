@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour
     public GameObject target;
     public bool touchedPlayer = false;
     public bool canEnemyTouch = true;
+	public Material redMaterial;
     private bool freeze = false;
 
     private void Start()
@@ -39,6 +40,7 @@ public class EnemyController : MonoBehaviour
 
             touchedPlayer = true;
             Debug.Log("Enemy wins!");
+			coll.gameObject.GetComponent<PlayerController>().Lose();
         }
     }
 

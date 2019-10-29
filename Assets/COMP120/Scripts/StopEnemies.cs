@@ -2,17 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StopEnemies : MonoBehaviour
+public class StopEnemies : PowerUpClass
 {
-    private void OnTriggerEnter(Collider coll)
-    {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-
-        foreach (GameObject enemy in enemies)
+    public override void PowerUp(GameObject[] enemyList)
+	{
+		foreach (GameObject enemy in enemyList)
         {
-            enemy.GetComponent<EnemyController>().Freeze();
-        }
-
-        Destroy(gameObject);
-    }
+			enemy.GetComponent<EnemyController>().Freeze();
+		}
+	}
 }

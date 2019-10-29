@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7017955048621773853}
   - component: {fileID: 4857715501419885599}
   - component: {fileID: 2697369211424141773}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StopEnemiesPowerUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
